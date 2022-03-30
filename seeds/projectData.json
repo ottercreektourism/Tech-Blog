@@ -15,5 +15,17 @@
     "needed_funding": 800
   }
 ]
+[
+  {
+    "title": "Here's the title",
+    "post_body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem sed risus ultricies tristique. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Velit sed ullamcorper morbi tincidunt ornare massa eget. Dignissim sodales ut eu sem integer vitae justo eget. Habitant morbi tristique senectus et netus et malesuada. Dis parturient montes nascetur ridiculus mus mauris. Sed augue lacus viverra vitae. In nisl nisi scelerisque eu. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Sed velit dignissim sodales ut eu sem integer vitae justo.",
+    "user_id": "someone23"
+  },
+  {
+    "title": "Here's the title2",
+    "post_body": "Lorem2 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem sed risus ultricies tristique. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Velit sed ullamcorper morbi tincidunt ornare massa eget. Dignissim sodales ut eu sem integer vitae justo eget. Habitant morbi tristique senectus et netus et malesuada. Dis parturient montes nascetur ridiculus mus mauris. Sed augue lacus viverra vitae. In nisl nisi scelerisque eu. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Sed velit dignissim sodales ut eu sem integer vitae justo.",
+    "user_id": ""
+  }
+]
 // A lot need to happen with this file. Make it so that the information that is displayed will be title, post_body date_created and user_id.
 // Have to also change that in the handlebars files to make sure that the information goes where it needs to on each card, etc.
