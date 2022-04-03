@@ -1,31 +1,13 @@
-[
-  {
-    "name": "Music Near Me",
-    "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-    "needed_funding": 5000
-  },
-  {
-    "name": "The Ultimate Tech Quiz",
-    "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-    "needed_funding": 10000
-  },
-  {
-    "name": "Roll 'Em Up",
-    "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-    "needed_funding": 800
-  }
-]
+
 [
   {
     "title": "Here's the title",
     "post_body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem sed risus ultricies tristique. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Velit sed ullamcorper morbi tincidunt ornare massa eget. Dignissim sodales ut eu sem integer vitae justo eget. Habitant morbi tristique senectus et netus et malesuada. Dis parturient montes nascetur ridiculus mus mauris. Sed augue lacus viverra vitae. In nisl nisi scelerisque eu. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Sed velit dignissim sodales ut eu sem integer vitae justo.",
-    "user_id": "someone23"
+    "user_id": "23"
   },
   {
     "title": "Here's the title2",
     "post_body": "Lorem2 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem sed risus ultricies tristique. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Velit sed ullamcorper morbi tincidunt ornare massa eget. Dignissim sodales ut eu sem integer vitae justo eget. Habitant morbi tristique senectus et netus et malesuada. Dis parturient montes nascetur ridiculus mus mauris. Sed augue lacus viverra vitae. In nisl nisi scelerisque eu. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Sed velit dignissim sodales ut eu sem integer vitae justo.",
-    "user_id": ""
+    "user_id": "54"
   }
 ]
-// A lot need to happen with this file. Make it so that the information that is displayed will be title, post_body date_created and user_id.
-// Have to also change that in the handlebars files to make sure that the information goes where it needs to on each card, etc.

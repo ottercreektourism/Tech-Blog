@@ -13,7 +13,6 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  // What does the math part of this do?
   for (const blogpost of blogpostData) {
     await Blogpost.create({
       ...blogpost,

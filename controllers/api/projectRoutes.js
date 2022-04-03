@@ -5,40 +5,55 @@ const withAuth = require('../../utils/auth');
 
 // Post route to make the new funding project with the parameters that have been set up in the project model??
 
-// router.post('/', withAuth, async (req, res) => {
-//   try {
-//     const newProject = await Project.create({
-//       ...req.body,
-//       user_id: req.session.user_id,
-//     });
+router.post('/', withAuth, async (req, res) => {
+    try {
+        const newBlogpost = await Blogpost.create({
+            ...req.body,
+            user_id: req.session.user_id,
+        });
 
-//     res.status(200).json(newProject);
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-// });
+        res.status(200).json(newBlogpost);
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
 
 
-// Deletes the project where the id is specified, where id and user_id are in the model.
 
-// router.delete('/:id', withAuth, async (req, res) => {
-//   try {
-//     const projectData = await Project.destroy({
-//       where: {
-//         id: req.params.id,
-//         user_id: req.session.user_id,
-//       },
-//     });
+router.put('/:id', withAuth, async (req, res) => {
+    try {
+        const updatedBlogpost = await Blogpost.update(
+            req.body,
+            {
+                where: { id: req.params.id }
 
-//     if (!projectData) {
-//       res.status(404).json({ message: 'No project found with this id!' });
-//       return;
-//     }
+            });
+        res.status(200).json(updatedBlogpost);
+    } catch (err) {
+        res.status(400).json(err);
+    }
+})
 
-//     res.status(200).json(projectData);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+
+// Deletes the project where the id is specified
+
+router.delete('/:id', withAuth, async (req, res) => {
+  try {
+    const blogpostData = await Blogpost.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (!blogpostData) {
+      res.status(404).json({ message: 'No blog found with this id!' });
+      return;
+    }
+
+    res.status(200).json(blogpostData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
