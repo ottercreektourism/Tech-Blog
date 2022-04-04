@@ -1,7 +1,5 @@
 const router = require('express').Router();
 const { User } = require('../../models');
-// MIGHT NEED MOST OF THIS FILE
-
 
 // Post route to create a new user with the user_id set to what the user wants it to be. Sets logged in status to be true.
 
