@@ -10,7 +10,7 @@ router.get('/', withAuth, async (req, res) => {
         include: [
             {
                 model: User,
-                attributes: ['displayName'],
+                attributes: ['name'],
             },
         ],
     });
@@ -35,7 +35,7 @@ router.get('/comment/:id', async (req, res) => {
         include: [
           {
             model: User,
-            attributes: ['displayName'],
+            attributes: ['name'],
           },
         ],
       });

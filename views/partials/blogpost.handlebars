@@ -1,0 +1,16 @@
+<article class="blogpost">
+    <div class="title">
+        <a href="/blogpost/{{id}}" target="_blank">
+        {{title}}
+        <span class="user-info">
+            {{user.user_id}} on {{format_date date_created}}
+        </span>
+        </a>
+    </div>
+
+    <div class="comments">
+        <a href="/blogpost/{{id}}">
+        {{user.user_id}}{{comment_body}}
+        </a>
+    </div>
+</article>
