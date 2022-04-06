@@ -1,6 +1,5 @@
 const loginFormHandler = async (event) => {
   event.preventDefault();
-  // MIGHT NEED MOST OF THIS FILE
 
   // Collect values from the login form
   const email = document.querySelector('#email-login').value.trim();
@@ -15,8 +14,8 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      // If successful, redirect the browser to the profile page
-      document.location.replace('/profile');
+      // If successful, redirect the browser to the homepage
+      document.location.replace('/homepage');
     } else {
       alert(response.statusText);
     }
@@ -38,7 +37,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/homepage');
     } else {
       alert(response.statusText);
     }
