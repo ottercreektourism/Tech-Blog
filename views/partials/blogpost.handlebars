@@ -1,4 +1,4 @@
-<article class="blogpost">
+{{!-- <article class="blogpost">
     <div class="title">
         <a href="/blogpost/{{id}}">
         {{title}}
@@ -13,4 +13,52 @@
         {{user.user_id}}{{comment_body}}
         </a>
     </div>
-</article>
+</article> --}}
+
+<form method="post" id="postForm">
+  <div class="blog">
+    <textarea type="text" class="title" placeholder="Post title..." id="title"></textarea>
+    <textarea type="text" class="article" placeholder="Start writing here..." id="article"></textarea>
+  </div>
+
+  <div class="blog-options">
+    <button class="btn dark publish-btn" type="submit">publish</button>
+    <input type="file" accept="image/*" id="image-upload" hidden>
+    <label for="image-upload" class="btn grey upload-btn">Upload Image</label>
+  </div>
+</form>
+
+
+{{#each blogposts as |blogpost| }}
+<div class="row mbblogpost">
+  <div class="col-md-5">
+    <h2>
+      <a href="/blogpost/{{blogpost.id}}">{{blogpost.title}}</a>
+    </h2>
+    <p>Created by {{blogpost.user.name}} on {{format_date blogpost.date_created}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{blogpost.post_body}}
+    </p>
+  </div>
+</div>
+{{> comment comments=blogpost.comments}}
+{{/each}}
+
+
+{{!-- <div class="blog-card">
+  <img src="#" class="blog-image" alt="">
+  <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur.</h1>
+  <p class="blog-overview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt fugiat quos
+    porro repellat harum. Adipisci tempora corporis rem cum.</p>
+  <a href="/" class="btn dark">read</a>
+</div> --}}
+
+
+</section>
+
+
+
+
+<script src="/js/post.js"></script>

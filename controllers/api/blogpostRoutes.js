@@ -3,10 +3,10 @@ const { Blogpost } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
-// Post route to make the new funding project with the parameters that have been set up in the project model??
 
 router.post('/', withAuth, async (req, res) => {
     try {
+      console.log("activated+========================-========================");
         const newBlogpost = await Blogpost.create({
             ...req.body,
             user_id: req.session.user_id,

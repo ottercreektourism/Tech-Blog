@@ -6,7 +6,7 @@
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Create a New Project:</h3>
+    <h3>Create a New post:</h3>
 
     <form class="form new-project-form">
 
@@ -26,9 +26,10 @@
       </div> --}}
 
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">New Post</button>
+
       </div>
 
+      <button onclick="handlePost(event)" class="btn btn-primary">New Post</button>
     </form>
   </div>
 
@@ -42,7 +43,7 @@
         <h4><a href="/blogpost/{{blogpost.id}}">{{blogpost.title}}</a></h4>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{blogpost.id}}">DELETE</button>
+        <button onclick="handleDelete(event)" class="btn btn-sm btn-danger" data-id="{{blogpost.id}}">DELETE</button>
       </div>
     </div>
     {{/each}}
@@ -50,4 +51,4 @@
   {{/if}}
 </div>
 
-<script src="./js/profile.js"></script>
+<script src="./js/post.js"></script>
