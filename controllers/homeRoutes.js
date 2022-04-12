@@ -40,8 +40,8 @@ router.get('/blogpost/:id', async (req, res) => {
     });
 
     const blogpost = blogpostData.get({ plain: true });
-
-    res.render('blogpost', {
+// TODO: failed to render when i click on blogpost title in the dashboard
+    res.render('blogposts', {
       ...blogpost,
       logged_in: req.session.logged_in
     });

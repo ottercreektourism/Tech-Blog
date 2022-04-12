@@ -21,6 +21,7 @@ console.log(title, PostContent);
 
         if (response.ok) {
             // add route
+            // TODO: something fishy with the route here-- not rendering post when I click on it in dashboard.
             document.location.replace('/');
             console.log("response")
         } else {
