@@ -1,0 +1,19 @@
+{{!-- add content of the actual post --}}
+{{> blogpost blog}}
+
+{{#if logged_in}}
+<article class="blog" id="comment-form">
+    <form class="comment-form">
+        <div>Comment</div>
+        <div>
+            <textarea name="comment-body"></textarea>
+        </div>
+
+        <div>
+            <button type="submit" id="submit">Submit</button>
+        </div>
+    </form>
+</article>
+{{/if}}
+
+{{> comment comments=blogpost.comments}}

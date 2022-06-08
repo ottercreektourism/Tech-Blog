@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const blogposts = blogpostData.map((blogpost) => Blogpost.get({ plain: true }));
+    const blogposts = blogpostData.map((blogpost) => blogpost.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
@@ -28,7 +28,9 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/blogpost/:id', async (req, res) => {
+
+
+router.get('/blogposts/:id', async (req, res) => {
   try {
     const blogpostData = await Blogpost.findByPk(req.params.id, {
       include: [
@@ -41,8 +43,8 @@ router.get('/blogpost/:id', async (req, res) => {
 
     const blogpost = blogpostData.get({ plain: true });
 // TODO: failed to render when i click on blogpost title in the dashboard
-    res.render('blogposts', {
-      ...blogpost,
+    res.render('blogpost', {
+      blogpost,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -58,11 +60,11 @@ router.get('/dashboard', withAuth, async (req, res) => {
       attributes: { exclude: ['password'] },
       include: [{ model: Blogpost }],
     });
-console.log(userData)
     const user = userData.get({ plain: true });
+    console.log(user)
 
     res.render('dashboard', {
-      ...user,
+      user,
       logged_in: true
     });
   } catch (err) {

@@ -43,7 +43,7 @@ router.get('/comment/:id', async (req, res) => {
       const comment = commentData.get({ plain: true });
   console.log(commentData);
   console.log(comment);
-      res.render('practiceRoom', {
+      res.render('comment', {
         ...comment,
         logged_in: req.session.logged_in
       });

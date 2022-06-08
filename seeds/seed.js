@@ -1,4 +1,3 @@
-// DONE, just make sure I know what the math part is.
 const sequelize = require('../config/connection');
 const { User, Blogpost } = require('../models');
 

@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
     try {
-      console.log("activated+========================-========================");
+      console.log("activated==================================================");
         const newBlogpost = await Blogpost.create({
             ...req.body,
             user_id: req.session.user_id,

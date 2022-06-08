@@ -8,7 +8,7 @@ const handlePost = async (event) => {
     console.log("handling post")
 
     const title = document.querySelector('#title').value.trim();
-    const PostContent = document.querySelector('#post_body').value.trim();
+    const PostContent = document.querySelector('#article').value.trim();
 console.log(title, PostContent);
     if (title && PostContent) {
 
@@ -21,7 +21,7 @@ console.log(title, PostContent);
 
         if (response.ok) {
             // add route
-            // TODO: something fishy with the route here-- not rendering post when I click on it in dashboard.
+            // TODO: not rendering post when I click on it in dashboard.
             document.location.replace('/');
             console.log("response")
         } else {

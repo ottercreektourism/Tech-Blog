@@ -14,7 +14,7 @@
         </a>
     </div>
 </article> --}}
-
+{{#if logged_in}}
 <form method="post" id="postForm">
   <div class="blog">
     <textarea type="text" class="title" placeholder="Post title..." id="title"></textarea>
@@ -27,13 +27,14 @@
     <label for="image-upload" class="btn grey upload-btn">Upload Image</label>
   </div>
 </form>
+{{/if}}
 
 
-{{#each blogposts as |blogpost| }}
+
 <div class="row mbblogpost">
   <div class="col-md-5">
     <h2>
-      <a href="/blogpost/{{blogpost.id}}">{{blogpost.title}}</a>
+      <a href="/blogposts/{{blogpost.id}}">{{blogpost.title}}</a>
     </h2>
     <p>Created by {{blogpost.user.name}} on {{format_date blogpost.date_created}}</p>
   </div>
@@ -43,8 +44,25 @@
     </p>
   </div>
 </div>
-{{> comment comments=blogpost.comments}}
-{{/each}}
+
+
+{{#if blogpost.comments}}
+<div class="comments">
+    {{#each post.comments}}
+    <section class="comment">
+        <div class="meta">
+            {{user.name}} on {{format_date date_created}}
+        </div>
+
+        <div class="text">
+            {{comment_body}}
+        </div>
+    </section>
+    {{/each}}
+</div>
+{{/if}}
+{{!-- {{> comment comments=blogpost.comments}} --}}
+
 
 
 {{!-- <div class="blog-card">
